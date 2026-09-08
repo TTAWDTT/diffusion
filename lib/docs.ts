@@ -39,7 +39,7 @@ export type FileNode = {
 };
 
 const contentDirectory = path.join(process.cwd(), "content");
-const assetPrefix = process.env.NODE_ENV === "production" ? "/DIFFUSION" : "";
+const assetPrefix = process.env.NODE_ENV === "production" ? "/diffusion" : "";
 
 type MarkdownFile = { filePath: string; relativePath: string };
 
@@ -229,7 +229,9 @@ function escapeHtml(value: string) {
 
 function resolveAssetPath(source: string) {
   if (/^https?:\/\//i.test(source)) return source;
-  if (/^\/DIFFUSION(?:\/|$)/i.test(source)) return source;
+  if (/^\/diffusion(?:\/|$)/i.test(source)) {
+    return `${assetPrefix}${source.replace(/^\/diffusion/i, "")}`;
+  }
 
   const normalized = path.posix.normalize(`/${source.replace(/^\.\//, "")}`);
   if (normalized === "/.." || normalized.startsWith("/../")) return null;

@@ -1,7 +1,7 @@
 import { Head, Html, Main, NextScript } from "next/document";
 
 export default function Document() {
-  const assetPrefix = process.env.NODE_ENV === "production" ? "/DIFFUSION" : "";
+  const assetPrefix = process.env.NODE_ENV === "production" ? "/diffusion" : "";
 
   return (
     <Html lang="zh-CN">

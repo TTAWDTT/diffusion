@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export function SiteHeader() {
-  const assetPrefix = process.env.NODE_ENV === "production" ? "/DIFFUSION" : "";
+  const assetPrefix = process.env.NODE_ENV === "production" ? "/diffusion" : "";
 
   return (
     <header className="site-header">

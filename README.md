@@ -45,11 +45,11 @@ date: 2026-09-08
 
 支持标题、段落、列表、引用、代码块、行内代码、链接、图片、标准 Markdown 表格、行内公式和多行 KaTeX 数学公式。正文图片会保持较大的展示尺寸，背景图不会被用于页面装饰。
 
-图片资源放在 `public/` 下，例如 `public/images/figure.png`，然后在 Markdown 中写 `![示意图](images/figure.png)`；从 Obsidian 复制的 `![[figure.png]]` 语法也可以直接使用。构建时会自动为生产环境补上 `/DIFFUSION` 前缀。
+图片资源放在 `public/` 下，例如 `public/images/figure.png`，然后在 Markdown 中写 `![示意图](images/figure.png)`；从 Obsidian 复制的 `![[figure.png]]` 语法也可以直接使用。构建时会自动为生产环境补上 `/diffusion` 前缀；页面品牌显示为 `DIFFUSION`。
 
 ## 在线地址
 
 - 仓库：<https://github.com/TTAWDTT/diffusion>
-- GitHub Pages：<https://ttawdtt.github.io/DIFFUSION/>
+- GitHub Pages：<https://ttawdtt.github.io/diffusion/>
 
 推送到 `main` 分支，或在 Actions 中手动运行 `Deploy DIFFUSION to GitHub Pages`，即可触发部署。
